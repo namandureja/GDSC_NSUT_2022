@@ -12,13 +12,17 @@ Before starting your work, make sure to drop a comment on the issue you wish to 
 
 Once you feel you have completed the sub-tasks specified in the issue, take a screenshot of the component you created or edited and upload it in the comments section of the issue along with the list of new files that you created and the pre-existing ones you modified
 
+**All the changes should be pushed to the development branch.**
+
 ## File Structure
 
 Having a proper and efficient file structure is very important while working on a project with multiple editors.
 It is imperative that you adhere to the following layout whenever you add a new file to this project.
 
 **Components folder** : contains all components and their css (if necessary)
+
 **Assets/Images folder** : contains images
+
 **Pages folder** : contains separate page components and their respective css in corresponding directories. The pages are exported using the `index.jsx` file.
 
 **All files returning a component should have a .`jsx` extension rather than a `.js` extension**
