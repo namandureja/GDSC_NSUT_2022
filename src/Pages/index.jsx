@@ -1,7 +1,7 @@
-import home from './home/home';
-import ourTeam from './our-team/our-team';
-import feed from './feed/feed';
-import events from './events/events';
-import contactUs from './contact-us/contact-us';
+import Home from "./Home";
+import Team from "./Team";
+import Feed from "./Feed";
+import Events from "./Events";
+import Contact from "./Contact";
 
-export { home, ourTeam, feed, events, contactUs };
+export { Home, Team, Feed, Events, Contact };
