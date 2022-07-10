@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "venue": "Online Google Meet",
+      "date": "24 | 10| 2020",
+      "name": "GSOC Contest"
+    },
+    {
+      "id": 2,
+      "venue": "SAC Building",
+      "date": "30 | 12 | 2021",
+      "name": "Kickstart Induction"
+    },
+    {
+      "id": 3,
+      "venue": "Main Auditorium , Admin Block",
+      "date": "17 | 10 | 2021",
+      "name": "Hackathon"
+    },
+    {
+      "id": 4,
+      "venue": "S03 , Smart Block",
+      "date": "20 | 04 | 2022",
+      "name": "BlockChain Webinar"
+    }
+  ]
+  
