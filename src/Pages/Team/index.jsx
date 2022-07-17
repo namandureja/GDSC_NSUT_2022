@@ -1,7 +1,18 @@
-import React from "./team.css";
+import "./team.css";
+import TeamCard from "./TeamCard";
 
 function Team() {
-  return <div>our team</div>;
+  return (
+    <>
+    <div className="team-title">Web Team</div>
+    <div className="team-card-container">
+      <TeamCard color="#4285F4" memberImage={require("../../Assets/Images/DSC-Logo.png")} memberName="Adnan Hashmi" memberStatus="Web Lead" memberSocialPortfolioPath="/" memberSocialGithubPath="/" memberSocialLinkedinPath="/" memberSocialInstagramPath="/" />
+      <TeamCard color="#EA4335" memberImage={require("../../Assets/Images/DSC-Logo.png")} memberName="Adnan Hashmi" memberStatus="Web Lead" memberSocialPortfolioPath="/" memberSocialGithubPath="/" memberSocialLinkedinPath="/" memberSocialInstagramPath="/" />
+      <TeamCard color="#FBBC04" memberImage={require("../../Assets/Images/DSC-Logo.png")} memberName="Adnan Hashmi" memberStatus="Web Lead" memberSocialPortfolioPath="/" memberSocialGithubPath="/" memberSocialLinkedinPath="/" memberSocialInstagramPath="/" />
+      <TeamCard color="#0F9D58" memberImage={require("../../Assets/Images/DSC-Logo.png")} memberName="Adnan Hashmi" memberStatus="Web Lead" memberSocialPortfolioPath="/" memberSocialGithubPath="/" memberSocialLinkedinPath="/" memberSocialInstagramPath="/" />
+    </div>
+    </>
+  );
 }
 
 export default Team;
