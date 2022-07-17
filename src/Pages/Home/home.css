@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow', sans-serif;
+}
+
+section.general-section {
+    display: flex;
+    align-items: center;
+    height: 500px;
+    width: 100vw;
+    padding: 50px 100px;
+    background-color: #fff;
+}
+
+.general-section .container {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.general-section .container .title {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.general-section .container .content {
+    margin: 30px 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.general-section img {
+    width: 400px;
+    max-height: none;
+    height: 400px;
+}
+
+.general-section.home-section {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(256,256,256,0);
+}
+
+.general-section.home-section img {
+    height: 45px;
+    width: 80px;
+}
+
+.home-section .soceity-name {
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.home-section .college-name {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.home-section .soceity-info {
+    font-size: 14px;
+    width: 800px;
+    text-align: center;
+    margin: 10px 0 20px;
+}
+
+a.learn-more-button {
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    text-decoration: none;
+    width: fit-content;
+    background-color: #4285F4;
+    border-radius: 5px;
+    padding: 5px 40px;
+}
