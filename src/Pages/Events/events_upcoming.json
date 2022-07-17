@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "venue": "Main Auditorium , Admin Block",
+    "date": "24 | 07| 2022",
+    "name": "Google Seminar"
+  },
+  {
+    "id": 2,
+    "venue": "SAC Building",
+    "date": "19 | 07 | 2022",
+    "name": "Kickstart Workshop"
+  },
+  {
+    "id": 3,
+    "venue": "Online Mode Google Meet",
+    "date": "02 | 08 | 2022",
+    "name": "GSOC Practice"
+  },
+  {
+    "id": 4,
+    "venue": "Main Auditorium , Admin Block",
+    "date": "20 | 08 | 2022",
+    "name": "BlockChain Webinar"
+  }
+]
