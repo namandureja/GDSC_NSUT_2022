@@ -35,7 +35,7 @@ body {
   background-color: white;
 }
 
-h1 {
+.eventsContainer h1 {
   /* font-size: 3em; */
   text-align: center;
   margin: 0;
@@ -67,7 +67,7 @@ h1 {
   color: #000000;
 }
 
-img {
+.eventsContainer img {
   width: 100%;
 
   max-height: 19rem; /* height: 229px;

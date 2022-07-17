@@ -55,10 +55,9 @@
 }
 .navbar-container > svg {
     position: absolute;
-    top: 0;
+    top: 1.2rem;
     right: 2rem;
-    transform: translateY(85%);
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     cursor: pointer;
     display: none;
 }
@@ -71,20 +70,30 @@
         flex-direction: column;
         align-items: flex-start;
         width: 100%;
+        padding: 0;
     }
     .navbar-logo-text {
         display: none;
+    }
+    .navbar-logo {
+        margin: 1rem 0;
     }
     .navbar-logo > img {
         margin-left: 2rem;
     }
     .navbar-links {
+        position: absolute;
+        bottom: 0;
+        transform: translateY(100%);
+        background-color: white;
         width: 100%;
-        margin-top: 1rem;
+        gap: 0;
         max-height: 0;
         flex-direction: column;
-        transition: 0.3s ease-in-out;
-        /* border-top: 1px solid #00000080; */
+        transition: max-height 0.2s ease-in-out;
+        -webkit-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.15);
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.15);
     }
     .navbar-links.expanded {
         max-height: 50vh;

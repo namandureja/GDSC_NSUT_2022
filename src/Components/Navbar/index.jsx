@@ -1,7 +1,7 @@
 import "./navbar.css";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { GiHamburgerMenu } from "react-icons/gi";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const NavLinkWithUnderline = ({ to, text }) => {
     const [linkOpen, setLinkOpen] = useState(false);
@@ -40,7 +40,11 @@ function Navbar() {
                     <NavLinkWithUnderline to="/feed" text="Feed" />
                     <NavLinkWithUnderline to="/contact" text="Contact Us" />
                 </div>
-                <GiHamburgerMenu onClick={() => setExpanded((state) => !state)} />
+                {expanded ? (
+                    <FaTimes onClick={() => setExpanded(false)} />
+                ) : (
+                    <FaBars onClick={() => setExpanded(true)} />
+                )}
             </div>
         </div>
     );
