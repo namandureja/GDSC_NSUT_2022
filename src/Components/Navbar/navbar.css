@@ -1,0 +1,103 @@
+.navbar,
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 10;
+}
+
+.navbar-container {
+    width: 85%;
+    justify-content: space-between;
+    padding: 1rem 0;
+    position: relative;
+}
+.navbar-logo {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+.navbar-logo img {
+    height: 1.6rem;
+}
+.navbar-logo-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: medium;
+}
+.navbar-logo-text span:nth-child(2) {
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+.navbar-links {
+    display: flex;
+    gap: 16px;
+    overflow: hidden;
+}
+
+.navbar-links > div {
+    padding: 4px 2px;
+    position: relative;
+    z-index: 5;
+}
+.navbar-links > .active-link::after {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 2px;
+    background-color: var(--google-blue);
+    border-radius: 99px;
+}
+.navbar-container > svg {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    transform: translateY(85%);
+    font-size: 1.4rem;
+    cursor: pointer;
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .navbar-container > svg {
+        display: block;
+    }
+    .navbar-container {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+    .navbar-logo-text {
+        display: none;
+    }
+    .navbar-logo > img {
+        margin-left: 2rem;
+    }
+    .navbar-links {
+        width: 100%;
+        margin-top: 1rem;
+        max-height: 0;
+        flex-direction: column;
+        transition: 0.3s ease-in-out;
+        /* border-top: 1px solid #00000080; */
+    }
+    .navbar-links.expanded {
+        max-height: 50vh;
+    }
+    .navbar-links > .active-link::after {
+        display: none;
+        /* width: 100%; */
+    }
+    .navbar-links > .active-link {
+        background-color: #f2f2f2;
+    }
+    .navbar-links > div {
+        text-align: center;
+        padding: 1rem 0;
+    }
+}
