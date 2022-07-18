@@ -1,7 +1,12 @@
 import "./contact.css";
+import Footer from "../../Components/Footer/Footer";
 
 function Contact() {
-  return <div>contact us</div>;
+  return (
+    <>
+    <Footer />
+    </>
+  );
 }
 
 export default Contact;

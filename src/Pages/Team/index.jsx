@@ -1,5 +1,6 @@
 import "./team.css";
 import TeamCard from "./TeamCard";
+import Footer from "../../Components/Footer/Footer";
 
 function Team() {
   return (
@@ -11,6 +12,7 @@ function Team() {
       <TeamCard color="#FBBC04" memberImage={require("../../Assets/Images/DSC-Logo.png")} memberName="Adnan Hashmi" memberStatus="Web Lead" memberSocialPortfolioPath="/" memberSocialGithubPath="/" memberSocialLinkedinPath="/" memberSocialInstagramPath="/" />
       <TeamCard color="#0F9D58" memberImage={require("../../Assets/Images/DSC-Logo.png")} memberName="Adnan Hashmi" memberStatus="Web Lead" memberSocialPortfolioPath="/" memberSocialGithubPath="/" memberSocialLinkedinPath="/" memberSocialInstagramPath="/" />
     </div>
+    <Footer />
     </>
   );
 }

@@ -1,7 +1,12 @@
 import React from "./feed.css";
+import Footer from "../../Components/Footer/Footer";
 
 function Feed() {
-  return <div>feed</div>;
+  return (
+    <>
+    <Footer />
+    </>
+  )
 }
 
 export default Feed;

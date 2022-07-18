@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./card";
+import Footer from "../../Components/Footer/Footer";
 import styles from "./events.module.css";
 import { useState } from "react";
 import eve from "./events_upcoming.json";
@@ -15,6 +16,7 @@ const Events = () => {
     setEvents("P");
   }
   return (
+    <>
      <div>
       <h1 className={styles.super}>Events and Workshops</h1>
       <div className={styles.eventHeading}>
@@ -70,6 +72,8 @@ const Events = () => {
       )}
       
     </div>
+    <Footer />
+    </>
   );
 };
 
