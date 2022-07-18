@@ -18,27 +18,31 @@ export default function Section(props) {
     else if (props.align === 'right') {
         return (
             <section className='general-section'>
-                <div className="container">
-                    <div className="title">{props.title}</div>
-                    <div className="content">
-                        {props.content}
+                <div className="home-wrapper">
+                    <div className="container">
+                        <div className="title">{props.title}</div>
+                        <div className="content">
+                            {props.content}
+                        </div>
+                        <Link className="learn-more-button" to={props.link} style={{backgroundColor: props.color}}>Learn More</Link>
                     </div>
-                    <Link className="learn-more-button" to={props.link} style={{backgroundColor: props.color}}>Learn More</Link>
+                    <img src={props.img} alt="img"  style={{marginLeft: "auto"}}/>
                 </div>
-                <img src={props.img} alt="img"  style={{marginLeft: "auto"}}/>
             </section>
         )
     }
     else {
         return (
-            <section className="general-section">
-                <img src={props.img} alt="img" style={{marginRight: "auto"}} />
-                <div className="container">
-                    <div className="title">{props.title}</div>
-                    <div className="content">
-                        {props.content}
+            <section className="general-section" style={{backgroundColor: "#f1f1f1"}}>
+                <div className="home-wrapper">
+                    <img src={props.img} alt="img" style={{marginRight: "auto"}} />
+                    <div className="container">
+                        <div className="title">{props.title}</div>
+                        <div className="content">
+                            {props.content}
+                        </div>
+                        <Link className="learn-more-button" to={props.link} style={{backgroundColor: props.color}}>Learn More</Link>
                     </div>
-                    <Link className="learn-more-button" to={props.link} style={{backgroundColor: props.color}}>Learn More</Link>
                 </div>
             </section>
         )

@@ -8,16 +8,21 @@
 }
 
 section.general-section {
-    display: flex;
-    align-items: center;
-    height: 500px;
+    height: 400px;
     width: 100vw;
-    padding: 50px 100px;
     background-color: #fff;
 }
 
+section.general-section .home-wrapper {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: min(1400px, 100vw);
+    padding: 0px 100px;
+}
+
 .general-section .container {
-    width: 33%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -41,6 +46,7 @@ section.general-section {
 }
 
 .general-section.home-section {
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
