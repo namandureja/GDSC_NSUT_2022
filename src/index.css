@@ -16,6 +16,7 @@
 
 html {
     overflow-x: hidden;
+    font-size: 62.5%;
 }
 
 body {
@@ -36,4 +37,9 @@ li {
 body {
     font-family: "Roboto", sans-serif;
     color: #000000;
+    padding: 0;
+    margin: 0;
+    /* background-image: url("../../Assets/Images/bg.png"); */
+    background-image: radial-gradient(rgba(0, 0, 0, 0.1) 10%, transparent 10%);
+    background-size: 15px 15px;
 }
