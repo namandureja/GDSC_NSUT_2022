@@ -2,7 +2,7 @@ import "./team.css";
 import TeamCard from "./TeamCard";
 import DSC_Logo from "../../Assets/Images/DSC-Logo.png";
 
-function Team() {
+export default function Team() {
   return (
     <>
     <div className="team-title">Web Team</div>
@@ -47,5 +47,3 @@ function Team() {
     </>
   );
 }
-
-export default Team;
