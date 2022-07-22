@@ -1,6 +1,6 @@
 import "./team.css";
 import TeamCard from "./TeamCard";
-import Footer from "../../Components/Footer/Footer";
+import DSC_Logo from "../../Assets/Images/DSC-Logo.png";
 
 function Team() {
   return (
@@ -8,43 +8,42 @@ function Team() {
     <div className="team-title">Web Team</div>
     <div className="team-card-container">
       <TeamCard color="#4285F4" 
-                memberImage={require("../../Assets/Images/DSC-Logo.png")}
-                 memberName="Adnan Hashmi"
-                 memberStatus="Web Lead"
-                 memberSocialPortfolioPath="/"
-                 memberSocialGithubPath="/"
-                 memberSocialLinkedinPath="/"
-                 memberSocialInstagramPath="/"
+                memberImage={DSC_Logo}
+                memberName="Adnan Hashmi"
+                memberStatus="Web Lead"
+                memberSocialPortfolioPath="/"
+                memberSocialGithubPath="/"
+                memberSocialLinkedinPath="/"
+                memberSocialInstagramPath="/"
       />
       <TeamCard color="#EA4335" 
-                memberImage={require("../../Assets/Images/DSC-Logo.png")}
-                 memberName="Adnan Hashmi"
-                 memberStatus="Web Lead"
-                 memberSocialPortfolioPath="/"
-                 memberSocialGithubPath="/"
-                 memberSocialLinkedinPath="/"
-                 memberSocialInstagramPath="/"
+                memberImage={DSC_Logo}
+                memberName="Aryav Bhola"
+                memberStatus="Web Mentee"
+                memberSocialPortfolioPath="/"
+                memberSocialGithubPath="/"
+                memberSocialLinkedinPath="/"
+                memberSocialInstagramPath="/"
       />
       <TeamCard color="#FBBC04" 
-                memberImage={require("../../Assets/Images/DSC-Logo.png")}
-                 memberName="Adnan Hashmi"
-                 memberStatus="Web Lead"
-                 memberSocialPortfolioPath="/"
-                 memberSocialGithubPath="/"
-                 memberSocialLinkedinPath="/"
-                 memberSocialInstagramPath="/"
+                memberImage={DSC_Logo}
+                memberName="Adnan Hashmi"
+                memberStatus="Web Lead"
+                memberSocialPortfolioPath="/"
+                memberSocialGithubPath="/"
+                memberSocialLinkedinPath="/"
+                memberSocialInstagramPath="/"
       />
       <TeamCard color="#0F9D58" 
-                memberImage={require("../../Assets/Images/DSC-Logo.png")}
-                 memberName="Adnan Hashmi"
-                 memberStatus="Web Lead"
-                 memberSocialPortfolioPath="/"
-                 memberSocialGithubPath="/"
-                 memberSocialLinkedinPath="/"
-                 memberSocialInstagramPath="/"
+                memberImage={DSC_Logo}
+                memberName="Aryav Bhola"
+                memberStatus="Web Mentee"
+                memberSocialPortfolioPath="/"
+                memberSocialGithubPath="/"
+                memberSocialLinkedinPath="/"
+                memberSocialInstagramPath="/"
       />
     </div>
-    <Footer />
     </>
   );
 }

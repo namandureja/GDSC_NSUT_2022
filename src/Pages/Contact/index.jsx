@@ -1,11 +1,8 @@
 import "./contact.css";
-import Footer from "../../Components/Footer/Footer";
 
 function Contact() {
   return (
-    <>
-    <Footer />
-    </>
+    <div>Contacts</div>
   );
 }
 
