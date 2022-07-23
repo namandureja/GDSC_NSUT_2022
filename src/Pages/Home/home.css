@@ -118,6 +118,10 @@
     border: 1px solid rgb(231, 231, 231);
 }
 
+.efp-section .home-card img {
+    height: 190px;
+}
+
 .efp-section .home-card .title {
     font-size: 22px;
     font-weight: 500;
