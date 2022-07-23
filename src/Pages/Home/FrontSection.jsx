@@ -20,7 +20,7 @@ export default function FrontSection(props) {
                     <div className="soceity-info">{content}</div>
                     <Link className="lets-connect-button" to="/contacts">Lets Connect</Link>
                 </div>
-                <img src={section_img} alt="Geeky" />
+                <img className="section-image" src={section_img} alt="Geeky" />
             </div>
         </section>
     );

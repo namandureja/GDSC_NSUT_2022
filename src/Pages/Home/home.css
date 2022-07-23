@@ -28,6 +28,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+    margin-left: 40px;
 }
 
 .horizontal-container {
@@ -73,6 +74,11 @@
 .home-section .heading {
     font-size: 34px;
     font-weight: 500;
+}
+
+.home-section .section-image {
+    width: 50%;
+    margin-right: -40px;
 }
 
 .wwd-section .heading {
@@ -146,6 +152,7 @@
 
 .contacts-section .info {
     font-size: 18px;
+    text-align: center;
 }
 
 .contacts-section .icons {
@@ -157,4 +164,58 @@
     font-size: 25px;
     margin: 20px 0;
     color: #4285F4;
+}
+
+@media screen and (max-width: 1100px) {
+    .front-section .wrapper {
+        justify-content: center;
+    }
+    .front-section .home-custom-container > .horizontal-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .front-section .home-custom-container {
+        align-items: center;
+        margin-left: 0;
+    }
+    .front-section .soceity-info {
+        text-align: center;
+    }
+    .front-section .section-image {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .home-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .front-section .soceity-info {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .wwd-section .heading {
+        font-size: 30px;
+        margin: 0;
+    }
+    .front-section .soceity-name {
+        font-size: 20px;
+    }
+    .front-section .college-name {
+        font-size: 14px;
+    }
+    .home-section .home-card {
+        width: 250px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .contacts-section .heading {
+        font-size: 30px;
+    }
+    .contacts-section .info {
+        font-size: 16px;
+    }
 }
