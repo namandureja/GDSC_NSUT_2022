@@ -3,7 +3,7 @@ import Card from "./card";
 import styles from "./events.module.css";
 import { useState } from "react";
 import eve from "./events_upcoming.json";
-import pastEve from './events_past.json';
+import pastEve from "./events_past.json";
 const Events = () => {
   const [events, setEvents] = useState("U");
   const onClickUpcomingEventHandler = (e) => {

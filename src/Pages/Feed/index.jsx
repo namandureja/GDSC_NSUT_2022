@@ -1,9 +1,7 @@
-import React from "./feed.css";
+import "./feed.css";
 
-function Feed() {
+export default function Feed() {
   return (
     <div>Feed</div>
   )
 }
-
-export default Feed;
