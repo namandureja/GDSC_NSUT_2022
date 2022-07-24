@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+main {
+  padding: 6rem 8rem;
+}
+
+/* For Testing */
+header {
+  height: 93px;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 3px 17px -4px rgba(0, 0, 0, 0.1);
+}
+/* For Testing */
+
+.carousel-container,
+.search-container {
+  margin-bottom: 5rem;
+}
+
+.carousel-container .carousel {
+  position: relative;
+  margin-bottom: 2.5rem;
+  width: 100%;
+  height: fit-content;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.carousel .carousel-arrow {
+  position: absolute;
+  top: 50%;
+  font-size: 23px;
+  color: white;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carousel-arrow.arrow-left {
+  left: 31px;
+}
+
+.carousel-arrow.arrow-right {
+  right: 31px;
+  transform: rotate(180deg) translateY(50%);
+}
+
+.carousel-item {
+  position: relative;
+}
+
+/* Overlay */
+.carousel .carousel-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 23.96%, rgba(0, 0, 0, 0.8) 100%);;
+}
+
+.carousel-item .carousel-item-content {
+  position: absolute;
+  left: 44px;
+  bottom: 4rem;
+  color: white;
+  z-index: 1; 
+}
+
+.carousel-item-content .carousel-item-title {
+  font-weight: 400;
+  line-height: 1.2;
+  font-size: 36px;
+}
+
+.carousel-item-content .carousel-item-desc {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.carousel img {
+  display: block;
+  width: 100%;
+  height: 375px;
+  object-fit: cover;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.carousel-dot {
+  height: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #D9D9D9;
+}
+
+.carousel-dot.active {
+  background-color: #4285F4;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.search-container input,
+.search-container .dropdown-btn {
+  padding: 0.7em 1em;
+  width: 250px;
+  font-family: inherit;
+  border: 1.2px solid #8D8D8D;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.search-container input:focus,
+.search-container .dropdown-btn:focus {
+  outline: 1.5px solid #4285F4;
+}
+
+.search-container .dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dropdown-btn span {
+  font-weight: 500;
+  text-align: left;
+}
+
+.search-icon,
+.category-icon,
+.dropdown-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+}
+
+.search-wrapper {
+  position: relative; 
+}
+
+.search-container .search-input {
+  padding-right: 3.2em;
+}
+
+.search-input:focus + .search-icon {
+  transform: translateY(-50%) scale(1.2);
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  color: #8D8D8D;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-toggle {
+  margin-left: auto;
+  color: #8D8D8D;
+  transition: transform 0.3s ease-in-out;
+}
+
+.dropdown-btn:focus .dropdown-toggle {
+  transform: rotate(180deg);
+}

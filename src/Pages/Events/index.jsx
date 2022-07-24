@@ -1,75 +1,70 @@
 import React from "react";
 import Card from "./card";
-import styles from "./events.module.css";
+import "./events.css";
 import { useState } from "react";
 import eve from "./events_upcoming.json";
 import pastEve from './events_past.json';
+import Image from "../../Assets/Images/events-workshop.jpg";
+import { MdArrowBackIosNew, MdFilterList } from "react-icons/md";
+import { RiSearchLine } from "react-icons/ri";
+import { IoIosArrowDown } from "react-icons/io";
+
 const Events = () => {
   const [events, setEvents] = useState("U");
-  const onClickUpcomingEventHandler =(e) => {
+  const onClickUpcomingEventHandler = (e) => {
     e.preventDefault();
     setEvents("U");
   }
-  const onClickPastEventHandler =(e) => {
+  const onClickPastEventHandler = (e) => {
     e.preventDefault();
     setEvents("P");
   }
+
   return (
-     <div>
-      <h1 className={styles.super}>Events and Workshops</h1>
-      <div className={styles.eventHeading}>
-      <h2 className={(events === "U") ? styles.eventChange : ""} onClick={onClickUpcomingEventHandler} >Upcoming Events</h2>
-      <h2>|</h2>
-      <h2 className={(events === "P") ? styles.eventChange : ""} onClick={onClickPastEventHandler} >Past Events</h2>
-      </div>
-      { events === "U" && (
-        <div className={styles.eventsContainer}>
-        {eve.map((even) => {
-          return (
-            <>
-              <Card
-                key={even.id}
-                date={even.date}
-                venue={even.venue}
-                name={even.name}
-              />
-            </>
-          );
-        })}
+    <>
+      <header></header>
 
-        {/* <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card /> */}
-      </div>
-      )}
-      { events === "P" && (
-        <div className={styles.eventsContainer}>
-        {pastEve.map((even) => {
-          return (
-            <>
-              <Card
-                key={even.id}
-                date={even.date}
-                venue={even.venue}
-                name={even.name}
-              />
-            </>
-          );
-        })}
-
-        {/* <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card /> */}
-      </div>
-      )}
-      
-    </div>
+      <main>
+        <div className={'carousel-container'}>
+          <div className={'carousel'}>
+            <div className={'carousel-item'}>
+              <img src={Image} alt="hello" />
+              <div className={'carousel-item-content'}>
+                <h1 className={'carousel-item-title'}>UX Tech 2022</h1>
+                <p className={'carousel-item-desc'}>A user interface and experience workshop</p>
+              </div>
+            </div>
+            <MdArrowBackIosNew className="carousel-arrow arrow-left" />
+            <MdArrowBackIosNew className="carousel-arrow arrow-right" />
+          </div>
+          <div className={'carousel-dots'}>
+            <div className={'carousel-dot active'}></div>
+            <div className={'carousel-dot'}></div>
+            <div className={'carousel-dot'}></div>
+          </div>
+        </div>
+        <div className={'search-container'}>
+          <div className="search-wrapper">
+            <input type="text" className="search-input" placeholder="Search" />
+            <div className="search-icon">
+              <RiSearchLine />
+            </div>
+          </div>
+          <div className="dropdown">
+            <button className="dropdown-btn">
+              <div className="category-icon">
+                <MdFilterList />
+              </div>
+              <span>Categories</span>
+              <div className="dropdown-toggle">
+                <IoIosArrowDown />
+              </div>
+            </button>
+          </div>
+        </div>
+        <div className={'events-container'}></div>
+      </main>
+    </>
   );
 };
 
