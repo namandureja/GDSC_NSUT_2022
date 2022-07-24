@@ -1,9 +1,8 @@
 import React from "react";
-import Card from "./card";
+import Card from "./Card";
 import "./events.css";
 import { useState } from "react";
-import eve from "./events_upcoming.json";
-import pastEve from './events_past.json';
+import upcomingEvents from "./events_upcoming.json";
 import Image from "../../Assets/Images/events-workshop.jpg";
 import { MdArrowBackIosNew, MdFilterList } from "react-icons/md";
 import { RiSearchLine } from "react-icons/ri";
@@ -23,7 +22,6 @@ const Events = () => {
   return (
     <>
       <header></header>
-
       <main>
         <div className={'carousel-container'}>
           <div className={'carousel'}>
@@ -60,9 +58,30 @@ const Events = () => {
                 <IoIosArrowDown />
               </div>
             </button>
+            <div className="dropdown-menu">
+              <div className="dropdown-item">Category 1</div>
+              <div className="dropdown-item">Category 2</div>
+              <div className="dropdown-item">Category 3</div>
+              <div className="dropdown-item">Category 4</div>
+              <div className="dropdown-item">Category 5</div>
+              <div className="dropdown-item">Category 6</div>
+            </div>
           </div>
         </div>
-        <div className={'events-container'}></div>
+        <div className={'events-container'}>
+          <div className={'events-header'}>
+            <h1>Upcoming Events</h1>
+            <span>View All</span>
+          </div>
+          <div className="event-cards">
+            {
+              events === "U" && 
+              upcomingEvents.map(event => { 
+                return <Card key={event.id} {...event} />
+              })
+            }
+          </div>
+        </div>
       </main>
     </>
   );
