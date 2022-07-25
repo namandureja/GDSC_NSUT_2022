@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import DSC_Logo from '../../Assets/Images/DSC-Logo.png';
-import section_img from '../../Assets/Images/home-front-img.png';
+// import section_img from '../../Assets/Images/home-front-img.png';
 
 export default function FrontSection(props) {
     const { content } = props;
@@ -20,7 +20,8 @@ export default function FrontSection(props) {
                     <div className="soceity-info">{content}</div>
                     <Link className="lets-connect-button" to="/contacts">Lets Connect</Link>
                 </div>
-                <img className="section-image" src={section_img} alt="Geeky" />
+                <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_qq5qecip.json"  background="transparent"  speed="1"  loop autoplay></lottie-player>
+                {/* <img className="section-image" src={section_img} alt="Geeky" /> */}
             </div>
         </section>
     );
