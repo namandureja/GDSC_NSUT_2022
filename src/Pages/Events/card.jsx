@@ -1,9 +1,14 @@
 import React from 'react'
 import { FaMapMarkerAlt } from "react-icons/fa";
 
-const Card = ({ name, date, description, venue, image }) => {
+const Card = ({ event, showEventModal }) => {
 
+  const { name, date, description, venue, image } = event;
   const Image = require(`../../Assets/Images/${image}`);
+
+  function handleClick() {
+    showEventModal(event);
+  }
 
   return (
     <div className='event-card'>
@@ -20,7 +25,7 @@ const Card = ({ name, date, description, venue, image }) => {
           </div>
           <span className='event-venue'>{venue}</span>
         </div>
-        <button className='event-learn-more-btn'>Learn More</button>
+        <button className='event-learn-more-btn' onClick={handleClick}>Learn More</button>
       </div>
     </div>
   )
