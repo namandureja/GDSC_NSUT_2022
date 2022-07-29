@@ -3,11 +3,11 @@ import Card from "./Card";
 import "./events.css";
 import { useState } from "react";
 import upcomingEvents from "./events_upcoming.json";
-import Image from "../../Assets/Images/events-workshop.jpg";
 import { MdArrowBackIosNew, MdFilterList } from "react-icons/md";
 import { RiSearchLine } from "react-icons/ri";
 import { IoIosArrowDown } from "react-icons/io";
 import { HiLocationMarker } from "react-icons/hi";
+import Carousel from "./Carousel";
 
 const Events = () => {
   const [events, setEvents] = useState("U");
@@ -28,22 +28,7 @@ const Events = () => {
     <>
       <main>
         <div className={'carousel-container'}>
-          <div className={'carousel'}>
-            <div className={'carousel-item'}>
-              <img src={Image} alt="hello" />
-              <div className={'carousel-item-content'}>
-                <h1 className={'carousel-item-title'}>UX Tech 2022</h1>
-                <p className={'carousel-item-desc'}>A user interface and experience workshop</p>
-              </div>
-            </div>
-            <MdArrowBackIosNew className="carousel-arrow arrow-left" />
-            <MdArrowBackIosNew className="carousel-arrow arrow-right" />
-          </div>
-          <div className={'carousel-dots'}>
-            <div className={'carousel-dot active'}></div>
-            <div className={'carousel-dot'}></div>
-            <div className={'carousel-dot'}></div>
-          </div>
+          <Carousel />
         </div>
         <div className={'search-container'}>
           <div className="search-wrapper">

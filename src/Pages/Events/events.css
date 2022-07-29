@@ -94,9 +94,10 @@ main {
   aspect-ratio: 1;
   border-radius: 50%;
   background-color: #D9D9D9;
+  cursor: pointer;
 }
 
-.carousel-dot.active {
+.carousel-dot.carousel-dot-active {
   background-color: #4285F4;
 }
 
