@@ -48,12 +48,8 @@ const Events = () => {
               </div>
             </button>
             <div className="dropdown-menu">
-              <div className="dropdown-item">Category 1</div>
-              <div className="dropdown-item">Category 2</div>
-              <div className="dropdown-item">Category 3</div>
-              <div className="dropdown-item">Category 4</div>
-              <div className="dropdown-item">Category 5</div>
-              <div className="dropdown-item">Category 6</div>
+              <div className="dropdown-item">Past Events</div>
+              <div className="dropdown-item">Upcoming Events</div>
             </div>
           </div>
         </div>
