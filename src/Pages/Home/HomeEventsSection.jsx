@@ -5,7 +5,7 @@ import homeEventsImage from "../../Assets/Images/home-eventsSection-img.png";
 export default function HomeEventsSection() {
     return (
         <section className="home-section events-section">
-            <div class="home-events-wrapper-container">
+            <div class="wrapper">
                 <div class="home-triangle-box"></div>
                 <div class="home-events-inner-container">
                     <div class="content">
