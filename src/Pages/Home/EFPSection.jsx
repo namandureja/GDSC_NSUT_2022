@@ -6,7 +6,7 @@ import home_feed_img from '../../Assets/Images/home-feed-img.png';
 import home_projects_img from '../../Assets/Images/home-projects-img.png';
 import { VscArrowRight } from "react-icons/vsc";
 
-function EFPCard(props) {
+export function EFPCard(props) {
     const {Image, Title, Content} = props;
     return (
         <div className='home-card'>

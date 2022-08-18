@@ -1,16 +1,25 @@
-import React from 'react'
+import React from 'react';
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { GrMail } from "react-icons/gr";
 
 export default function TeamCard(props) {
+  const {memberImage, memberName, memberStatus, memberAbout, memberSocialLinkedinPath, memberSocialGithubPath, memberSocialMailPath} = props;
   return (
     <div className="team-card">
-      <div className="member-image" style={{borderColor: props.color, backgroundImage: `url(${props.memberImage})`}}></div>
-      <div className="member-name">{props.memberName}</div>
-      <div className="member-status">{props.memberStatus}</div>
-      <div className="member-social">
-          <a href={props.memberSocialPortfolioPath} target="_blank" rel="noreferrer"><ion-icon name="laptop-outline"></ion-icon></a>
-          <a href={props.memberSocialGithubPath} target="_blank" rel="noreferrer"><ion-icon name="logo-github"></ion-icon></a>
-          <a href={props.memberSocialaedinPath} target="_blank" rel="noreferrer"><ion-icon name="logo-linkedin"></ion-icon></a>
-          <a href={props.memberSocialInstagramPath} target="_blank" rel="noreferrer"><ion-icon name="logo-instagram"></ion-icon></a>
+      <div className="overlay">
+        <div className="member-about">{memberAbout}</div>
+        <div className="social">
+          <a className="social-icons linkedin" href={memberSocialLinkedinPath}><FaLinkedinIn /></a>
+          <a className="social-icons github" href={memberSocialGithubPath}><FaGithub /></a>
+          <a className="social-icons mail" href={memberSocialMailPath}><GrMail /></a>
+        </div>
+      </div>
+      <div className="static">
+        <div className="image-container">
+          <img className="member-image" src={memberImage} alt={memberName} />
+        </div>
+        <div className="member-name">{memberName}</div>
+        <div className="member-status">{memberStatus}</div>
       </div>
     </div>
   );
