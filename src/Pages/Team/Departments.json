@@ -114,8 +114,8 @@
         "urlCode": "app-development",
         "name": "App Development",
         "heroImage": "https://i.gifer.com/Owm.gif",
-        "departmentLeads": {
-            "Adnan Hashmi": {
+        "departmentLeads": [
+            {
                 "id": 1,
                 "memberImage": "https://source.unsplash.com/1w9I6H4aftw",
                 "memberName": "Adnan Hashmi",
@@ -125,7 +125,7 @@
                 "memberSocialGithubPath": "/",
                 "memberSocialMailPath": "/"
             },
-            "Shubham Rana": {
+            {
                 "id": 2,
                 "memberImage": "https://source.unsplash.com/xd4ao7ALxb0",
                 "memberName": "Shubham Rana",
@@ -135,7 +135,7 @@
                 "memberSocialGithubPath": "/",
                 "memberSocialMailPath": "/"
             }
-        },
+        ],
         "members": [
             {
                 "id": 1,
@@ -224,8 +224,8 @@
         "urlCode": "competitive-programming",
         "name": "Competitive Programming",
         "heroImage": "https://i.gifer.com/Owm.gif",
-        "departmentLeads": {
-            "Adnan Hashmi": {
+        "departmentLeads": [
+            {
                 "id": 1,
                 "memberImage": "https://source.unsplash.com/1w9I6H4aftw",
                 "memberName": "Adnan Hashmi",
@@ -235,7 +235,7 @@
                 "memberSocialGithubPath": "/",
                 "memberSocialMailPath": "/"
             },
-            "Shubham Rana": {
+            {
                 "id": 2,
                 "memberImage": "https://source.unsplash.com/xd4ao7ALxb0",
                 "memberName": "Shubham Rana",
@@ -245,7 +245,7 @@
                 "memberSocialGithubPath": "/",
                 "memberSocialMailPath": "/"
             }
-        },
+        ],
         "members": [
             {
                 "id": 1,
@@ -334,8 +334,8 @@
         "urlCode": "machine-learning",
         "name": "Machine Learning",
         "heroImage": "https://i.gifer.com/Owm.gif",
-        "departmentLeads": {
-            "Adnan Hashmi": {
+        "departmentLeads": [
+            {
                 "id": 1,
                 "memberImage": "https://source.unsplash.com/1w9I6H4aftw",
                 "memberName": "Adnan Hashmi",
@@ -345,7 +345,7 @@
                 "memberSocialGithubPath": "/",
                 "memberSocialMailPath": "/"
             },
-            "Shubham Rana": {
+            {
                 "id": 2,
                 "memberImage": "https://source.unsplash.com/xd4ao7ALxb0",
                 "memberName": "Shubham Rana",
@@ -355,7 +355,7 @@
                 "memberSocialGithubPath": "/",
                 "memberSocialMailPath": "/"
             }
-        },
+        ],
         "members": [
             {
                 "id": 1,
@@ -444,8 +444,8 @@
         "urlCode": "graphics",
         "name": "Graphics",
         "heroImage": "https://i.gifer.com/Owm.gif",
-        "departmentLeads": {
-            "Adnan Hashmi": {
+        "departmentLeads": [
+            {
                 "id": 1,
                 "memberImage": "https://source.unsplash.com/1w9I6H4aftw",
                 "memberName": "Adnan Hashmi",
@@ -455,7 +455,7 @@
                 "memberSocialGithubPath": "/",
                 "memberSocialMailPath": "/"
             },
-            "Shubham Rana": {
+            {
                 "id": 2,
                 "memberImage": "https://source.unsplash.com/xd4ao7ALxb0",
                 "memberName": "Shubham Rana",
@@ -465,7 +465,7 @@
                 "memberSocialGithubPath": "/",
                 "memberSocialMailPath": "/"
             }
-        },
+        ],
         "members": [
             {
                 "id": 1,
@@ -554,8 +554,8 @@
         "urlCode": "content",
         "name": "Content",
         "heroImage": "https://i.gifer.com/Owm.gif",
-        "departmentLeads": {
-            "Adnan Hashmi": {
+        "departmentLeads": [
+            {
                 "id": 1,
                 "memberImage": "https://source.unsplash.com/1w9I6H4aftw",
                 "memberName": "Adnan Hashmi",
@@ -565,7 +565,7 @@
                 "memberSocialGithubPath": "/",
                 "memberSocialMailPath": "/"
             },
-            "Shubham Rana": {
+            {
                 "id": 2,
                 "memberImage": "https://source.unsplash.com/xd4ao7ALxb0",
                 "memberName": "Shubham Rana",
@@ -575,7 +575,7 @@
                 "memberSocialGithubPath": "/",
                 "memberSocialMailPath": "/"
             }
-        },
+        ],
         "members": [
             {
                 "id": 1,
@@ -664,8 +664,8 @@
         "urlCode": "operations",
         "name": "Operations",
         "heroImage": "https://i.gifer.com/Owm.gif",
-        "departmentLeads": {
-            "Adnan Hashmi": {
+        "departmentLeads": [
+            {
                 "id": 1,
                 "memberImage": "https://source.unsplash.com/1w9I6H4aftw",
                 "memberName": "Adnan Hashmi",
@@ -675,7 +675,7 @@
                 "memberSocialGithubPath": "/",
                 "memberSocialMailPath": "/"
             },
-            "Shubham Rana": {
+            {
                 "id": 2,
                 "memberImage": "https://source.unsplash.com/xd4ao7ALxb0",
                 "memberName": "Shubham Rana",
@@ -685,7 +685,7 @@
                 "memberSocialGithubPath": "/",
                 "memberSocialMailPath": "/"
             }
-        },
+        ],
         "members": [
             {
                 "id": 1,
