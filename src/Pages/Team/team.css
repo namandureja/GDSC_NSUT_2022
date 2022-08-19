@@ -1,4 +1,5 @@
 .team-page {
+    /* padding: 0 70px; */
     background-color: #fff;
 }
 
@@ -149,6 +150,69 @@
     place-items: center;
 }
 
+.department-page .department-hero-section {
+    display: flex;
+    margin: auto;
+    padding: 70px 95px 0;
+    justify-content: space-between;
+}
+
+.department-page .title {
+    font-size: 32px;
+}
+
+.department-page .sub-title {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.mentor-card-container {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.department-page .right-section img {
+    height: 350px;
+}
+
+.department-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 70px;
+    gap: 30px;
+}
+
+.department-members .static img.member-image {
+    width: 175px;
+    height: 175px;
+}
+
+.department-members .static .member-name {
+    font-size: 17px;
+}
+
+.department-members .static .member-status {
+    font-size: 13px;
+}
+
+.department-members .static .image-container {
+    width: 175px;
+    height: 175px;
+}
+
+.department-members .overlay {
+    width: 175px;
+    height: 175px;
+}
+
+@media screen and (max-width: 1000px) {
+    .department-page .right-section img {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .team-hero-section .left-container {
         width: 100%;
@@ -157,6 +221,20 @@
     }
     .team-hero-section .right-container {
         display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .department-page .left-section .title {
+        text-align: center;
+    }
+    .department-page .left-section .sub-title {
+        text-align: center;
+    }
+    .department-page .department-members,
+    .department-page .department-hero-section  {
+        padding: 70px 10px;
+        justify-content: center;
     }
 }
 
