@@ -150,6 +150,21 @@
     place-items: center;
 }
 
+.department-card-container .home-card {
+    width: 280px;
+    margin: 15px auto 10px;
+}
+
+.department-card-container .home-card img {
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.department-card-container .home-card .title {
+    margin-bottom: 20px;
+}
+
 .department-page .department-hero-section {
     display: flex;
     margin: auto;

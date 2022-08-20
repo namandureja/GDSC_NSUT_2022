@@ -1,62 +1,30 @@
 import React from 'react';
 import "./team.css";
-import Departments from "./Departments.json";
 import { useParams, Navigate } from 'react-router-dom';
-import TeamCard from "./TeamCard";
-
+import Departments from "./Departments.json";
+import DepartmentUtility from "./DepartmentUtility";
 
 
 export default function Department() {
   const { department } = useParams();
-  if (department === "all-departments" || department in Departments) {
-    const currentDepartment = Departments[department];
+
+  if (department === "all-departments") {
     return (
-      <div className="team-page department-page">
-        <section className="department-hero-section">
-          <div className="left-section">
-            <div className="title">{currentDepartment.name}</div>
-            <div className="sub-title">Department</div>
-            <div className="mentor-card-container">
-              {
-                currentDepartment.departmentLeads.map(departmentLead => {
-                  return (
-                    <TeamCard key={departmentLead.id}
-                          memberImage={departmentLead.memberImage}
-                          memberName={departmentLead.memberName}
-                          memberStatus={departmentLead.memberStatus}
-                          memberAbout={departmentLead.memberAbout}
-                          memberSocialLinkedinPath={departmentLead.memberSocialLinkedinPath}
-                          memberSocialGithubPath={departmentLead.memberSocialGithubPath}
-                          memberSocialMailPath={departmentLead.memberSocialMailPath}
-                    />
-                  )
-                })
-              }
-            </div>
-          </div>
-          <div className="right-section">
-            <img src={currentDepartment.heroImage} alt="" />
-          </div>
-        </section>
-        <section className="department-members">
-          {
-            currentDepartment.members.map(member => {
-              return (
-                <TeamCard key={member.id}
-                          memberImage={member.memberImage}
-                          memberName={member.memberName}
-                          memberStatus={member.memberStatus}
-                          memberAbout={member.memberAbout}
-                          memberSocialLinkedinPath={member.memberSocialLinkedinPath}
-                          memberSocialGithubPath={member.memberSocialGithubPath}
-                          memberSocialMailPath={member.memberSocialMailPath}
-                />
-              )
-            })
-          }
-        </section>
-      </div>
+      <>
+      <DepartmentUtility department="web-development" />
+      <DepartmentUtility department="app-development" />
+      <DepartmentUtility department="competitive-programming" />
+      <DepartmentUtility department="machine-learning" />
+      <DepartmentUtility department="graphics" />
+      <DepartmentUtility department="content" />
+      <DepartmentUtility department="operations" />
+      </>
     )
   }
+
+  else if (department in Departments) {
+    return <DepartmentUtility department={department} />
+  }
+
   else return ( <Navigate to="/team" replace={true} /> )
 }
