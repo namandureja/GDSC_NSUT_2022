@@ -162,7 +162,13 @@
 }
 
 .department-card-container .home-card .title {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    margin-left: 2px;
+}
+
+.department-card-container .home-card .content {
+    font-size: 15px;
 }
 
 .department-page .department-hero-section {
