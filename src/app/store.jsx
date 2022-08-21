@@ -3,7 +3,7 @@ import { configureStore } from '@reduxjs/toolkit'
 import { createSlice } from '@reduxjs/toolkit'
 
 const navSlice = createSlice({
-  name: 'navState',
+  name: 'navLogoState',
   initialState: {
     logoState: 0
   },
@@ -16,11 +16,27 @@ const navSlice = createSlice({
     }
   }
 })
+
 export const {toggleNav} = navSlice.actions
+
+const navLinkSlice = createSlice({
+  name: 'navLinkState',
+  initialState: {
+    activeIndex: 0
+  },
+  reducers: {
+    setIndex: (state,param) => {
+        state.activeIndex = param.payload
+    }
+  }
+})
+
+export const {setIndex} = navLinkSlice.actions
 
 
 export default configureStore({
   reducer: {
-    navState : navSlice.reducer
+    navLogoState : navSlice.reducer,
+    navLinkState: navLinkSlice.reducer
   }
 })

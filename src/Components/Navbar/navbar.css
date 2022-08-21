@@ -55,28 +55,39 @@
 }
 .navbar-links {
     display: flex;
-    gap: 16px;
+    gap: 18px;
     overflow: hidden;
     font-size: 1em;
+    align-items: center;
 }
 
 .navbar-links > div {
-    padding: 4px 2px;
+    padding: 4px 5px;
     position: relative;
     z-index: 5;
     height: fit-content;
 }
-.navbar-links > .active-link::after {
+.navbar-links > div::after {
     bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
     content: "";
     position: absolute;
-    width: 60%;
+    width: 0%;
     height: 2px;
     background-color: var(--google-blue);
     border-radius: 99px;
+    transition: all 0.3s ease;
+
 }
+
+.navbar-links > div:hover::after{
+    width: 60%;
+}
+.navbar-links .active-link::after{
+    width: 60%;
+}
+
 .navbar-container > svg {
     display: none;
     font-size: 2rem;
