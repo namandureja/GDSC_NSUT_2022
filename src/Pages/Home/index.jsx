@@ -4,7 +4,6 @@ import WWDSection from "./WWDSection";
 import EFPSection from "./EFPSection";
 import ContactsSection from "./ContactsSection";
 import HomeEventsSection from "./HomeEventsSection";
-import Footer from "../../Components/Footer/Footer";
 
 export default function Home() {
 
@@ -17,7 +16,6 @@ export default function Home() {
       <EFPSection />
       <HomeEventsSection />
       <ContactsSection />
-      <Footer />
     </>
   );
 }

@@ -5,14 +5,14 @@ import { VscArrowRight } from "react-icons/vsc";
 
 const images = ["/assets/images/home-events-img.png","/assets/images/home-feed-img.png","/assets/images/home-projects-img.png"];
 
-function EFPCard(props) {
-    const {Image, Title, Content} = props;
+export function EFPCard(props) {
+    const {Image, Title, Content, To} = props;
     return (
         <div className='home-card'>
             <div style={{backgroundImage:`url("${Image}")`}} className="img" ></div>
             <div className="title">{Title}</div>
             <div className="content">{Content}</div>
-            <div className="arrow"><Link to={`/${Title.toLowerCase()}`}><VscArrowRight /></Link></div>
+            <div className="arrow"><Link to={To}><VscArrowRight /></Link></div>
         </div>
     )
 }
@@ -20,7 +20,8 @@ function EFPCard(props) {
 EFPCard.defaultProps = {
     Image: "",
     Title: "Events",
-    Content: "Lorem ipsum dolor sit, sjhd lawb jhwfgebhifs b aufgeprug egfhapji bghjbgv chid nwe maxime ducimus debitis voluptatem."
+    Content: "Lorem ipsum dolor sit, sjhd lawb jhwfgebhifs b aufgeprug egfhapji bghjbgv chid nwe maxime ducimus debitis voluptatem.",
+    To: "/"
 }
 
 EFPCard.propTypes = {
