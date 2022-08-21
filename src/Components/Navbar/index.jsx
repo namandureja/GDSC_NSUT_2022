@@ -2,14 +2,32 @@ import "./navbar.css";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { useSelector,useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import { setIndex } from "../../app/store";
 
-const NavLinkWithUnderline = ({ to, text , index }) => {
+const links = 
+[{
+    path: '/',
+    label: "Home"
+}, {
+    path: '/events',
+    label: "Events"
+}, {
+    path: '/team',
+    label: "Our Team"
+}, {
+    path: '/feed',
+    label: "Feed"
+}, {
+    path: '/contact',
+    label: "Contact Us"
+}]
+
+const NavLinkWithUnderline = ({ to, text, index }) => {
     const dispatch = useDispatch();
     const navLinkState = useSelector(state => state.navLinkState.activeIndex)
     return (
-        <div className={navLinkState===index? "active-link" : ""}>
+        <div className={navLinkState === index ? "active-link" : ""}>
             <NavLink to={to} onClick={() => dispatch(setIndex(index))}>
                 {text}
             </NavLink>
@@ -19,23 +37,25 @@ const NavLinkWithUnderline = ({ to, text , index }) => {
 
 function Navbar() {
     const [expanded, setExpanded] = useState(false);
-    const [elevate,setElevate] = useState(false);
+    const [elevate, setElevate] = useState(false);
     const location = useLocation();
+    const dispatch = useDispatch();
     useEffect(() => {
         setExpanded(false);
-    }, [location]);
+        dispatch(setIndex(links.findIndex(x=>location.pathname===x.path)))
+    }, [location,dispatch]);
 
-    useEffect(()=>{
-        window.addEventListener("scroll",scrollHandler);
-        return ()=>{
-            window.removeEventListener("scroll",scrollHandler);
+    useEffect(() => {
+        window.addEventListener("scroll", scrollHandler);
+        return () => {
+            window.removeEventListener("scroll", scrollHandler);
         }
-    },[])
+    }, [])
 
     const navState = useSelector(state => state.navLogoState.logoState)
 
-    const scrollHandler = (event)=>{
-        (window.scrollY>0)?setElevate(true):setElevate(false)
+    const scrollHandler = (event) => {
+        (window.scrollY > 0) ? setElevate(true) : setElevate(false)
     };
 
     return (
@@ -50,11 +70,10 @@ function Navbar() {
                 </div>
 
                 <div className={`navbar-links ${expanded ? "expanded" : ""}`}>
-                    <NavLinkWithUnderline to="/" text="Home" index={0} />
-                    <NavLinkWithUnderline to="/events" text="Events" index={1} />
-                    <NavLinkWithUnderline to="/team" text="Our Team" index={2} />
-                    <NavLinkWithUnderline to="/feed" text="Feed" index={3} />
-                    <NavLinkWithUnderline to="/contact" text="Contact Us" index={4} />
+                    {links.map((link,n)=>{
+                        return <NavLinkWithUnderline to={link.path} text={link.label} index={n} key={n} />
+
+                    })}
                 </div>
                 {expanded ? (
                     <FaTimes onClick={() => setExpanded(false)} />

@@ -22,7 +22,7 @@ export const {toggleNav} = navSlice.actions
 const navLinkSlice = createSlice({
   name: 'navLinkState',
   initialState: {
-    activeIndex: 0
+    activeIndex: undefined
   },
   reducers: {
     setIndex: (state,param) => {
