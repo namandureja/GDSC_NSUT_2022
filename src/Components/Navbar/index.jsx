@@ -2,6 +2,7 @@ import "./navbar.css";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import {  useSelector } from 'react-redux'
 
 const NavLinkWithUnderline = ({ to, text }) => {
     const [linkOpen, setLinkOpen] = useState(false);
@@ -18,21 +19,22 @@ const NavLinkWithUnderline = ({ to, text }) => {
 function Navbar() {
     const [expanded, setExpanded] = useState(false);
     const location = useLocation();
-
     useEffect(() => {
         setExpanded(false);
     }, [location]);
+    const navState = useSelector(state=>state.navState.logoState)
 
     return (
-        <div className="navbar">
-            <div className="navbar-container">
+        <div className={`navbar ${navState?"elevate":""}`}>
+            <div className={`navbar-container ${navState?"":'right'}`}>
                 <div className="navbar-logo">
-                    <img src="/gdsc-logo.png" alt="GDSC Logo" />
+                    <img src="/gdsc-logo.png" alt="GDSC Logo"  />
                     <div className="navbar-logo-text">
                         <span>Google Developer Student Clubs</span>
                         <span>Netaji Subhas University of Technology</span>
                     </div>
                 </div>
+                
                 <div className={`navbar-links ${expanded ? "expanded" : ""}`}>
                     <NavLinkWithUnderline to="/" text="Home" />
                     <NavLinkWithUnderline to="/events" text="Events" />

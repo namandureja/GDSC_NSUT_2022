@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import { Home, Events, Contact, Feed, Team } from "./Pages";
-
 function App() {
     return (
         <div className="App">
