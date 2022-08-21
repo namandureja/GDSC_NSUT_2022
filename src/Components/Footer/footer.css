@@ -39,7 +39,7 @@
     position: relative;
     display: flex;
     align-items: baseline;
-    color: white;
+    color: rgba(242, 242, 242, 75%);
     gap: 10px;
     top: 20px;
 }
