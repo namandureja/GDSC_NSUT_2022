@@ -13,7 +13,7 @@ export default function TeamCard(props) {
           <a className="social-icons github" href={memberSocialGithubPath}><FaGithub /></a>
           <a className="social-icons mail" href={memberSocialMailPath}><GrMail /></a>
         </div>
-      </div>
+      </div>xx
       <div className="static">
         <div className="image-container">
           <img className="member-image" src={memberImage} alt={memberName} />
