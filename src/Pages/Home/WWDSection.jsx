@@ -1,14 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types';
-import home_wwd_design_img from "../../Assets/Images/home-wwd-design-img.png";
-import home_wwd_code_img from "../../Assets/Images/home-wwd-code-img.png";
-// import home_wwd_develop_img from "../../Assets/Images/home-wwd-develop-img.png";
+import '@lottiefiles/lottie-player';
+
 
 function WWDCard(props) {
-    const {Image, Title, Content} = props;
+    const { Title, Content} = props;
     return (
-        <div className='home-card'>
-            <img src={Image} alt={Title} />
+        <div className={`home-card ${Title}`}>
+            <lottie-player src={`/assets/${Title}-lottie.json`} background="transparent"  speed="1"  loop autoplay></lottie-player>
             <div className="title">{Title}</div>
             <div className="content">{Content}</div>
         </div>
@@ -16,7 +15,6 @@ function WWDCard(props) {
 }
 
 WWDCard.defaultProps = {
-    Image: home_wwd_design_img,
     Title: "Design",
     Content: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam quo, velit defehi geyi ugfuiwef gdfsjhd lawb jhwfgebhifs b jhlafbpertiuwe rqwui fbjhewe by aufgeprug egfhapji bghjbgv chid nwe maxime ducimus debitis voluptatem."
 }
@@ -32,8 +30,8 @@ export default function WWDSection() {
             <div className="wrapper">
                 <div className="heading">What we do</div>
                 <div className="home-card-container">
-                    <WWDCard Image={home_wwd_design_img} Title="Design" />
-                    <WWDCard Image={home_wwd_code_img} Title="Code" />
+                    <WWDCard Title="Design" />
+                    <WWDCard  Title="Code" />
                     <WWDCard Title="Develop" />
                 </div>
             </div>
