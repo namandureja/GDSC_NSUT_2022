@@ -2,7 +2,8 @@
     font-size: 1.5rem;
     position: sticky;
     top: 0;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
+    background-color: white;
     border-bottom: 2px solid transparent;
 }
 
@@ -12,11 +13,19 @@
     z-index: 20;
 }
 
+.navbar.home{
+    background-color: transparent;
+}
+
+.navbar.home.elevate{
+    border-bottom: 1.5px solid rgb(231, 231, 231);
+    background-color: rgb(255, 255, 255);
+    z-index: 20;
+}
+
 .navbar,
 .navbar-container {
     display: flex;
-
-    background-color: white;
     z-index: 10;
 }
 

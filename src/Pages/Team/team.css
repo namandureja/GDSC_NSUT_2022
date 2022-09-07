@@ -50,13 +50,13 @@
 
 .team-card {
     position: relative;
-    margin: 0px auto;
+    /* margin: 0px auto; */
 }
 
 
 .team-card .static .member-image {
-    height: 280px;
-    width: 280px;
+    height: 270px;
+    width: 270px;
     object-fit: cover;
     object-position: top;
 }
@@ -75,9 +75,9 @@
     position: absolute;
     top: 0;
     z-index: 10;
-    height: 280px;
-    width: 100%;
-    padding: 40px 25px;
+    height: 270px;
+    width: 270px;
+    padding: 30px 25px;
     transition: all 0.25s ease;
     user-select: none;
     opacity: 0;
@@ -178,7 +178,7 @@
 .department-card-container .home-card .title {
     margin-bottom: 15px;
     font-size: 18px;
-    margin-left: 2px;
+    margin-bottom: 8px;
 }
 
 .department-card-container .home-card .content {
@@ -190,7 +190,7 @@
     margin: auto;
     padding: 70px 95px 0;
     justify-content: space-between;
-    max-width: 1400px;
+    max-width: 1620px;
 }
 
 .department-page .title {
@@ -216,10 +216,10 @@
 .department-members {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    padding: 70px;
+    padding: 70px 95px;
     row-gap: 50px;
     column-gap: 60px;
-    max-width: 1400px;
+    max-width: 1620px;
     margin: auto;
 }
 
@@ -240,7 +240,7 @@
 
 
 .department-members .overlay {
-    width: 100%;
+    width: 280px;
     height: 280px;
 }
 

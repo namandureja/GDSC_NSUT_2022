@@ -65,11 +65,11 @@
 .soceity-name {
     font-style: normal;
     font-weight: 300;
-    font-size: 25px;
+    font-size: 24px;
 }
 
 .college-name {
-    font-size: 18px;
+    font-size: 17px;
     font-weight: 300;
     color: #656C73;
 }
@@ -141,7 +141,7 @@
     display: flex;
     flex-direction: column;
     width: 24vw;
-    max-width: 480px;
+    max-width: 400px;
     min-width: 300px;
     margin: 20px 0;
     border-radius: 5px;
@@ -186,6 +186,8 @@
 .efp-section .home-card .img {
     height: 18vw;
     width: 100%;
+    max-height: 290px;
+    min-height: 200px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -370,7 +372,7 @@
     }
 }
 
-@media screen and (max-width:1280px) {
+@media screen and (max-width:1280px) and (min-width:1101px){
     .hero .wrapper{
         padding: 0 100px;
         padding-right: 70px;
@@ -420,7 +422,7 @@
     }
     .home-events-inner-container .content{
         width: 100%;
-    }
+    }   
     .home-section.events-section .info {
         width: 50%;
     }
@@ -443,11 +445,14 @@
         align-items: center;
         text-align: center;
     }
-    .info {
-        width: 100%;
+    .home-section.events-section .info {
+        width: 80%;
     }
     .home-events-image {
         display: none;
+    }
+    .home-events-host{
+        width: 80%;
     }
 }
 
@@ -470,13 +475,15 @@
         font-size: 16px;
     }
     .front-section .soceity-name {
-        font-size: 20px;
+        font-size: 5.4vw;
     }
     .front-section .college-name {
-        font-size: 14px;
+        font-size: 3.8vw;
     }
     .home-section .home-card {
         width: 250px;
+        max-width: none;
+        min-width: none;
         margin-left: 0;
         margin-right: 0;
     }

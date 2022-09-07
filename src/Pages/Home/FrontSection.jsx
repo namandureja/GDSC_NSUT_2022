@@ -31,7 +31,7 @@ export default function FrontSection(props) {
                     <p className="soceity-info">{content}</p>
                     <Link className="lets-connect-button" to="/contacts">Let's Connect</Link>
                 </div>
-                <lottie-player src="/assets/home-anim1.json"  background="transparent"  speed="1"  loop autoplay></lottie-player>
+                <lottie-player  src="https://assets5.lottiefiles.com/packages/lf20_qq5qecip.json"  background="transparent"  speed="1"  loop autoplay></lottie-player>
             </div>
         </section>
     );

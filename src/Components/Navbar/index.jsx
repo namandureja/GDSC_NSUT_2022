@@ -23,12 +23,14 @@ const links =
     label: "Contact Us"
 }]
 
+
+
 const NavLinkWithUnderline = ({ to, text, index }) => {
-    const dispatch = useDispatch();
-    const navLinkState = useSelector(state => state.navLinkState.activeIndex)
+    const [linkOpen, setLinkOpen] = useState(false);
+
     return (
-        <div className={navLinkState === index ? "active-link" : ""}>
-            <NavLink to={to} onClick={() => dispatch(setIndex(index))}>
+        <div className={linkOpen ? "active-link" : ""}>
+            <NavLink to={to} className={({ isActive }) => setLinkOpen(isActive)}>
                 {text}
             </NavLink>
         </div>
@@ -59,7 +61,7 @@ function Navbar() {
     };
 
     return (
-        <div className={`navbar ${elevate ? "elevate" : ""}`}>
+        <div className={`navbar ${elevate ? "elevate" : ""} ${location.pathname==="/" ? "home" : ""}`}>
             <div className={`navbar-container ${navState || location.pathname !== "/" ? "" : 'right'}`}>
                 <div className="navbar-logo">
                     <img src="/gdsc-logo.png" alt="GDSC Logo" />
