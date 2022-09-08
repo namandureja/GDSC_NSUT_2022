@@ -1,0 +1,292 @@
+.team-page {
+    min-height: 100vh;
+    background-color: #fff;
+}
+
+.team-section {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.team-hero-section {
+    display: flex;
+    align-items: center;
+    padding: 50px 70px;
+}
+
+.team-hero-section .left-container {
+    width: 50%;
+    margin-right: 10%;
+    margin-left: 50px;
+}
+
+.team-hero-section .left-container .title {
+    font-size: 32px;
+}
+
+.team-hero-section .left-container .content {
+    margin-top: 10px;
+    color: #656C73;
+    font-size: 18px;
+}
+
+.team-hero-section .right-container {
+    width: max(400px, 40%);
+}
+
+.team-hero-section .right-container img {
+    width: 100%;
+}
+
+.team-card-container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    padding: 70px;
+    row-gap: 50px;
+    column-gap: 20px;
+    margin: auto;
+}
+
+.team-card {
+    position: relative;
+    margin: 0px auto;
+}
+
+.image-container {
+    height: 200px;
+    width: 200px;
+}
+
+.team-card .static .member-image {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.team-card .static .member-name {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.team-card .static .member-status {
+    margin-top: 2px;
+    font-size: 14px;
+}
+
+.team-card .overlay {
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    height: 200px;
+    width: 200px;
+    padding: 25px;
+    opacity: 0;
+}
+
+.team-card .overlay:hover {
+    background-color: rgba(66, 133, 244, 0.7);
+    opacity: 1;
+}
+
+.team-card .overlay .member-about {
+    color: white;
+    font-size: 12px;
+}
+
+.team-card .overlay .social {
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 50px);
+    position: absolute;
+    bottom: 25px;
+}
+
+.team-card .overlay .social .social-icons {
+    margin: 0 5px;
+}
+
+.team-card .overlay .social .social-icons.linkedin {
+    display: grid;
+    place-items: center;
+    height: 20px;
+    width: 20px;
+    font-size: 14px;
+    background-color: white;
+    border-radius: 50%;
+    color: rgb(66, 133, 244);
+}
+
+.team-card .overlay .social .social-icons.github * {
+    height: 20px;
+    width: 20px;
+    background-color: rgba(66, 133, 244, 0.7);
+    border-radius: 50%;
+    color: white;
+}
+
+.team-card .overlay .social .social-icons.mail {
+    display: grid;
+    place-items: center;
+    height: 20px;
+    width: 20px;
+    font-size: 14px;
+    background-color: white;
+    border-radius: 50%;
+    color: rgb(66, 133, 244);
+}
+
+.team-section.efp-section > .title {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.department-card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1300px;
+    place-items: center;
+}
+
+.department-card-container .home-card {
+    width: 280px;
+    margin: 15px auto 10px;
+}
+
+.department-card-container .home-card img {
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.department-card-container .home-card .title {
+    margin-bottom: 15px;
+    font-size: 18px;
+    margin-left: 2px;
+}
+
+.department-card-container .home-card .content {
+    font-size: 15px;
+}
+
+.department-page .department-hero-section {
+    display: flex;
+    margin: auto;
+    padding: 70px 95px 0;
+    justify-content: space-between;
+    max-width: 1400px;
+}
+
+.department-page .title {
+    font-size: 32px;
+}
+
+.department-page .sub-title {
+    margin-top: 5px;
+    font-size: 20px;
+}
+
+.mentor-card-container {
+    display: flex;
+    gap: 30px;
+    margin: 40px 0;
+    flex-wrap: wrap;
+}
+
+.department-page .right-section img {
+    height: 350px;
+}
+
+.department-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 70px;
+    gap: 30px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.department-members .static img.member-image {
+    width: 175px;
+    height: 175px;
+}
+
+.department-members .static .member-name {
+    font-size: 17px;
+}
+
+.department-members .static .member-status {
+    font-size: 13px;
+}
+
+.department-members .static .image-container {
+    width: 175px;
+    height: 175px;
+}
+
+.department-members .overlay {
+    width: 175px;
+    height: 175px;
+}
+
+@media screen and (max-width: 1000px) {
+    .department-page .right-section img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .team-hero-section .left-container {
+        width: 100%;
+        margin-top: 40px;
+        text-align: center;
+    }
+    .team-hero-section .right-container {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .department-page .left-section .title {
+        text-align: center;
+    }
+    .department-page .left-section .sub-title {
+        text-align: center;
+    }
+    .department-page .department-members,
+    .department-page .department-hero-section  {
+        padding: 70px 10px;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .team-section.efp-section {
+        padding: 0 !important;
+    }
+    .team-section .home-card {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .team-section .home-card .title {
+        font-size: 20px;
+    }
+    .team-section .home-card .content {
+        font-size: 14px;
+    }
+    .team-hero-section .left-container .title {
+        font-size: 28px;
+    }
+    .team-hero-section .left-container .content {
+        font-size: 16px;
+    }
+    .team-hero-section {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .team-section.efp-section > .title {
+        font-size: 28px;
+    }
+}
