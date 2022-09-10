@@ -1,11 +1,18 @@
 import "./home.css";
+import FrontSection from "./FrontSection";
+import WWDSection from "./WWDSection";
+import EFPSection from "./EFPSection";
+import ContactsSection from "./ContactsSection";
+import HomeEventsSection from "./HomeEventsSection";
 
-function Home() {
+export default function Home() {
   return (
-    <div>
-      home
-    </div>
+    <>
+      <FrontSection content="At GDSC NSUT, we aim to learn, teach and grow. Together. The place where creative minds come together to build something amazing." />
+      <WWDSection />
+      <EFPSection />
+      <HomeEventsSection />
+      <ContactsSection />
+    </>
   );
 }
-
-export default Home;
