@@ -1,8 +1,9 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Card from "./Card";
 import "./events.css";
 import { useState } from "react";
 import upcomingEvents from "./events_upcoming.json";
+import pastEvents from "./events_upcoming.json";
 import { MdArrowBackIosNew, MdFilterList } from "react-icons/md";
 import { RiSearchLine } from "react-icons/ri";
 import { IoIosArrowDown } from "react-icons/io";
@@ -24,6 +25,28 @@ const Events = () => {
     modalOverlayRef.current.classList.remove("show");
   }
 
+  function handleShowDropdown(e) {
+    const isDropdownButton = e.target.matches(".dropdown-btn");
+    if (!isDropdownButton && e.target.closest(".dropdown") != null) return;
+
+    let currentDropdown;
+    if (isDropdownButton) {
+      currentDropdown = e.target.closest(".dropdown");
+      currentDropdown.classList.add("show");
+    }
+
+    document.querySelectorAll(".dropdown.show").forEach(dropdown => {
+      if (dropdown === currentDropdown) return;
+      dropdown.classList.remove("show");
+    })
+  }
+
+  useEffect(() => {
+    // toggle dropdown
+    document.addEventListener("click", handleShowDropdown);
+    return () => document.removeEventListener("click", handleShowDropdown);
+  }, [])
+
   return (
     <>
       <main>
@@ -38,7 +61,7 @@ const Events = () => {
             </div>
           </div>
           <div className="dropdown">
-            <button className="dropdown-btn">
+            <button className="dropdown-btn" onFocus={handleShowDropdown}>
               <div className="category-icon">
                 <MdFilterList />
               </div>
@@ -48,20 +71,23 @@ const Events = () => {
               </div>
             </button>
             <div className="dropdown-menu">
-              <div className="dropdown-item">Past Events</div>
-              <div className="dropdown-item">Upcoming Events</div>
+              <div className="dropdown-item" onClick={() => setEvents("P")}>Past Events</div>
+              <div className="dropdown-item" onClick={() => setEvents("U")}>Upcoming Events</div>
             </div>
           </div>
         </div>
         <div className={'events-container'}>
           <div className={'events-header'}>
-            <h1>Upcoming Events</h1>
+            <h1>{events === "U" ? "Upcoming" : "Past"} Events</h1>
             <span>View All</span>
           </div>
           <div className="event-cards">
             {
-              events === "U" &&
+              events === "U" ?
               upcomingEvents.map(event => {
+                return <Card key={event.id} event={event} showEventModal={showEventModal} />
+              }) :
+              pastEvents.map(event => {
                 return <Card key={event.id} event={event} showEventModal={showEventModal} />
               })
             }
