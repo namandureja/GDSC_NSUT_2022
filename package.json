@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+
     "@lottiefiles/lottie-interactivity": "^1.6.1",
     "@lottiefiles/lottie-player": "^1.5.7",
     "@react-md/icon": "^5.1.3",
