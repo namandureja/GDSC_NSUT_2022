@@ -46,6 +46,7 @@ export default function DepartmentUtility(props) {
                             memberSocialLinkedinPath={member.memberSocialLinkedinPath}
                             memberSocialGithubPath={member.memberSocialGithubPath}
                             memberSocialMailPath={member.memberSocialMailPath}
+                            isSmall = {true}
                   />
                 )
               })

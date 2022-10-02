@@ -7,7 +7,7 @@ export default function ContactsSection() {
         <section className='home-section contacts-section'>
             <div className="wrapper">
                 <div className="heading">Contact Us</div>
-                <div className="info">We would like to have a conversation</div>
+                <div className="info">We would love to have a conversation</div>
                 <div className="icons">
                     <BsFacebook style={{color: 'rgb(65 101 174)'}} />
                     <BsGithub style={{color: 'black'}} />
